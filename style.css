@@ -1,0 +1,48 @@
+.form-group {
+    margin-bottom: 1rem;
+    width: 600px;
+    height: auto;
+    position: relative;
+    margin-left: 25%;
+    margin-top: 5%;
+    border: 3px outset #0db0dd;
+    border-radius: 20px;
+    background-color: #FDFBF7;
+    padding:30px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+.valid {
+    border: 1px solid green;
+}
+
+.invalid{
+    border: 1px solid red;
+}
+html{
+    background-color:#04465C;
+}
+
+#check{
+    background-color: #04465C;
+		border-radius: 4px;
+		color: #ffffff;
+		margin-top: 10px;
+		padding: 10px;
+		text-align: center;
+		text-decoration: none;
+		font-size: 16px;
+}
