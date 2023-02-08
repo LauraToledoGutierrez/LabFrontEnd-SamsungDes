@@ -1,23 +1,34 @@
 <html>
+   
     <head>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <title> Laura Toledo </title>
         <link rel="stylesheet" href="style.css">
         <script src="index.js"></script>
+        <meta charset="UTF-8">
     </head>
     <body>
         <div class="form-group" >
             <form id="create-account">
                 <h1> Create Account </h1>
-                <label for="nombre">Nombre:</label>
+                <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre">
                 <div id="error" class="error"></div>
                 <div id="error" class="error"></div>
                 <br>
-                <label for="email">Email:</label>
+                <label for="email">Email</label>
                 <input type="email" id="email" name="email">
                 <div id="errorE" class="errorE"></div>
                 <br>
-                <input type="button" value="Validar" onclick="validar()">
+                <label for="password">Clave</label>
+                <input type="password" id="password" name="password">
+                <div id="errorP" class="errorP"></div>
+                <br>
+                <label for="password">Confirme su clave</label>
+                <input type="password" id="password2" name="password2">
+                <div id="errorP2" class="errorP2"></div>
+                <br>
+                <input type="button" id="validateButton" value="ENVIAR" onclick="validar()">
           </form>
         </div>
     </body>

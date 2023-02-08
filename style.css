@@ -1,3 +1,4 @@
+
 .form-group {
   /*display: flex;
   flex-direction: row;
@@ -6,18 +7,26 @@
   align-items: normal;
   align-content: stretch;*/
   margin-bottom: 1rem;
-  width: 600px;
+  width: 400px;
   height: auto;
-  position: relative;
-  margin-left: 25%;
-  margin-top: 5%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   border: 3px outset #3D435A;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: #2F3644;
   padding:30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
 }
  h1{
-  text-align: center;
+  text-align: left;
+  font-size: 25px;
+  font-weight: bold;
   color: #B6C4ED;
  }
   .error{
@@ -26,10 +35,7 @@
     position: relative;
   }
 
-  .errorE{
-    color:red;
-  }
-
+  
   .input-valid{
     border: 3px solid #008000;
     background-image: url(images/success-icon.svg);
@@ -63,3 +69,28 @@ html{
     color: #7F88A8;
 }
 
+#validateButton{
+  background-color: #6C63FF;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid black; 
+  font-size: 12px;
+  width: 100%;
+  height: 5%;
+  box-sizing: border-box;
+  font-size: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+label{
+  
+  display: inline-block;
+  
+  
+}
+input{
+  border: 1px solid black; 
+  border-radius: 5px;
+  margin-top: 3px;
+  width: 100%;
+  height: 5%;
+}
