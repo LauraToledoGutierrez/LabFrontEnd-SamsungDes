@@ -26,14 +26,18 @@ function validar(){
   if (email==""){
     errorE.textContent = "Rellene este campo";
     errorE.classList.add("errorE");
-    inputE.style.border = "3px solid #ff0000";
+    inputE.classList.remove("input-valid");
+    inputE.classList.add("input-invalid");
+    inputE.style.display ="inline-block";
   }
   else {
     errorE.textContent="";
     errorE.classList.remove("errorE");
-    inputE.style.border ="";
+    inputE.classList.remove("input-invalid");
+    inputE.classList.add("input-valid");
+    inputE.style.display ="inline-block";
   }
-  if(!isNaN(nombre) && !nombre==""){
+  if(!isNaN(nombre) && !nombre==""){ //ECHARLE UN OJO 
     errorText.textContent = "El nombre solo puede contener caracteres alfabeticos";
     errorText.classList.add("error");
     input.classList.remove("input-valid");
