@@ -10,13 +10,36 @@
     background-color: #FDFBF7;
     padding:30px;
   }
-  
-  label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+ 
+  .error{
+    color:red;
+    text-decoration: none;
+    position: relative;
   }
-  
+
+  .errorE{
+    color:red;
+  }
+
+  .input-valid{
+    border: 3px solid #008000;
+    background-image: url(images/success-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 99%;
+    display: none;
+    height: auto;
+    width: auto;
+  }
+  .input-invalid {
+    border: 3px solid #ff0000;
+    background-image: url(images/error-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 99%;
+    display: none;
+    height: auto;
+    width: auto;
+  }
+
   input[type="text"],
   input[type="email"],
   input[type="password"] {
@@ -25,24 +48,8 @@
     width: 100%;
     box-sizing: border-box;
   }
-.valid {
-    border: 1px solid green;
-}
 
-.invalid{
-    border: 1px solid red;
-}
 html{
     background-color:#04465C;
 }
 
-#check{
-    background-color: #04465C;
-		border-radius: 4px;
-		color: #ffffff;
-		margin-top: 10px;
-		padding: 10px;
-		text-align: center;
-		text-decoration: none;
-		font-size: 16px;
-}

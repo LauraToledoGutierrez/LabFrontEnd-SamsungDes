@@ -1,37 +1,48 @@
 
 
-const form = document.querySelector('#create-account');
-const username = document.querySelector('#username');
-const email = document.querySelector('#email');
-const password = document.querySelector('#password');
-const confirmPassword = document.querySelector('#confirm-password');
-const inputs = form.querySelector("input");
-const label = document.querySelector("#label");
-const button = document.querySelector("#button");
+function validar(){
+  var nombre = document.getElementById("nombre").value;
+  var email = document.getElementById("email").value;
+  var error = document.getElementById("error");
+  var errorE = document.getElementById("errorE");
+  var input = document.getElementById("nombre");
+  var inputE = document.getElementById("email");
+  
+  if (nombre == "") {
+    error.textContent = "Rellene este campo";
+    error.classList.add("error");
+    input.setAttribute("title", "ERRRRRRROR");
+    input.classList.remove("input-valid");
+    input.classList.add("input-invalid");
+    input.style.display ="inline-block";
 
-
-form.addEventListener('submit', e => {
-  e.preventDefault();
-
-  if (username.value.length < 3) {
-    alert('El nombre de usuario debe tener al menos 3 caracteres.');
-    return;
+  } else {
+    error.textContent = "";
+    error.classList.remove("error");
+    input.classList.remove("input-invalid");
+    input.classList.add("input-valid");
+    input.style.display ="inline-block";
   }
-
-  if (password.value !== confirmPassword.value) {
-    alert('Las contraseñas no coinciden.');
-    return;
+  if (email==""){
+    errorE.textContent = "Rellene este campo";
+    errorE.classList.add("errorE");
+    inputE.style.border = "3px solid #ff0000";
   }
-  inputs.forEach((input) => {
-    if (input.value === "") {
-      input.classList.add("invalid");
-    } else {
-      input.classList.add("valid");
-    }
-  });
-
-});
-function comprobar(){
-    label.innerHTML = "MENSAJE";
-
+  else {
+    errorE.textContent="";
+    errorE.classList.remove("errorE");
+    inputE.style.border ="";
+  }
+  if(!isNaN(nombre) && !nombre==""){
+    errorText.textContent = "El nombre solo puede contener caracteres alfabeticos";
+    errorText.classList.add("error");
+    input.classList.remove("input-valid");
+    input.classList.add("input-invalid");
+    
+  } else if(isNaN(nombre)) {
+    errorText.textContent = "";
+    errorText.classList.remove("error");
+    input.classList.remove("input-invalid");
+    input.classList.add("input-valid");
+  }
 }
