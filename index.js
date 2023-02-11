@@ -1,7 +1,6 @@
-const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('.form-group #formulario input');
 
-/* Función llamada al pulsar el boton Enviar de nuestro formulario */
+/* Función llamada al pulsar el botón 'Enviar' de nuestro formulario */
 function validar(){
   /* Recuperamos lo valores y elementos HTML correspondientes con 'document.getElementById' */
   var nombre = document.getElementById("nombre").value;
@@ -49,7 +48,7 @@ function validatePasswordMatch(password, confirmPassword) {
   }
 }
 
-/* Función para indicar que el input es invalido, introducimos el elemento de entrada (input), elemento de error (error) y el mensaje de error (errorMessage)  */
+/* Función para indicar que el input es inválido, introducimos el elemento de entrada (input), elemento de error (error) y el mensaje de error (errorMessage)  */
 function invalidateInput(input, error, errorMessage){
   /* Asigna el mensaje de error al contenido del elemento de error */
   error.textContent = errorMessage;
@@ -77,49 +76,49 @@ function validateInput(input, error, errorMessage){
 
 /* Función para validar el campo Nombre del formulario */
 function validateName(input, error, nombre) {
-  /* Controla si el campo esta vacio */
+  /* Controla si el campo esta vacío */
   if (nombre == "") {
     /* Si esta vacio llama a la funcion para invalidar ese campo */
     invalidateInput(input, error, "Rellene este campo");
-  /* Controla si el nombre contiene un numero o digitos */
+  /* Controla si el nombre contiene un número o dígitos */
   } else if (!isNaN(nombre) || /\d/.test(nombre)) {
-    /* Llama a la funcion para invalidar ese campo si el nombre contiene un numero o digitos */
+    /* Llama a la función para invalidar ese campo si el nombre contiene un número o dígitos */
     invalidateInput(input, error, "El nombre solo puede contener caracteres alfabeticos"); 
-  /* Si el nombre es valido (no esta vacio y solo tienen carácteres alfabéticos) */
+  /* Si el nombre es válido (no esta vacío y solo tienen carácteres alfabéticos) */
   } else {
-    /* Llama a la funcion para validar el campo */
+    /* Llama a la función para validar el campo */
     validateInput(input, error, " ");
   }
 }
 
 /* Función para validar el campo Email del formulario */
 function validateEmail(input, error, email) {
-  /* Controla si el campo esta vacio */
+  /* Controla si el campo esta vacío */
   if (email == "") {
-    /* Si esta vacio llama a la funcion para invalidar ese campo */
+    /* Si esta vacío llama a la funcion para invalidar ese campo */
     invalidateInput(input, error, "Rellene este campo");
-  /* Controla llamando a la funcion 'validateEmailType' si el formato del email es valido, devuelve false si es invalido */  
+  /* Controla llamando a la funcion 'validateEmailType' si el formato del email es valido, devuelve false si es inválido */  
   } else if (!validateEmailType(input.value)) {
-    /* Llama a la funcion para invalidar el campo si el formato es erroneo */ 
+    /* Llama a la función para invalidar el campo si el formato es erróneo */ 
     invalidateInput(input, error, "Email invalido");
-  /* Si el email es valido (no esta vacio y tiene el formato correcto) */
+  /* Si el email es válido (no esta vacío y tiene el formato correcto) */
   } else {
-    /* Llama a la funcion para validar el campo*/
+    /* Llama a la función para validar el campo*/
     validateInput(input, error, " ");
   }
 }
 
 /* Función para validar el campo Clave del formulario */
 function validatePassword1(input, error, password) {
-  /* Controla si el campo esta vacio */
+  /* Controla si el campo esta vacío */
   if (password == "") {
-     /* Si esta vacio llama a la funcion para invalidar ese campo */
+     /* Si esta vacío llama a la funcion para invalidar ese campo */
     invalidateInput(input, error, "Rellene este campo");
-  /* Controla llamando a la funcion 'validatePassword' si el formato de la clave es valido, devuelve false si es invalido */    
+  /* Controla llamando a la funcion 'validatePassword' si el formato de la clave es válido, devuelve false si es inválido */    
   } else if (!validatePassword(input.value)) {
-     /* Llama a la funcion para invalidar el campo si el formato es erroneo */ 
+     /* Llama a la función para invalidar el campo si el formato es erróneo */ 
     invalidateInput(input, error, "Debe tener más de 8 caracteres");
-   /* Si la clave es valida (no esta vacia y tiene el formato correcto) */  
+   /* Si la clave es válida (no esta vacía y tiene el formato correcto) */  
   } else {
     /* Llama a la funcion para validar el campo*/
     validateInput(input, error, " ");
@@ -128,17 +127,17 @@ function validatePassword1(input, error, password) {
 
 /* Función para validar el campo 'Confirme su clave' del formulario */
 function validatePassword2(input, error, password, password2) {
-  /* Controla si el campo esta vacio */
+  /* Controla si el campo esta vacío */
   if (password2 == "") {
-    /* Si esta vacio llama a la funcion para invalidar ese campo */
+    /* Si esta vacío llama a la funcion para invalidar ese campo */
     invalidateInput(input, error, "Rellene este campo");
-  /* Controla llamando a la funcion 'validatePasswordMatch' si las dos claves introducidas coinciden, devuelve false si es invalido */   
+  /* Controla llamando a la función 'validatePasswordMatch' si las dos claves introducidas coinciden, devuelve false si es inválido */   
   } else if (!validatePasswordMatch(password, password2)) {
     /* Llama a la funcion para invalidar el campo si no coinciden */ 
     invalidateInput(input, error, "Las contraseñas no coinciden");
-  /* Si las dos claves introducidas son iguales y no esta vacio el campo */
+  /* Si las dos claves introducidas son iguales y no esta vacío el campo */
   } else {
-    /* Llama a la funcion para validar el campo*/
+    /* Llama a la función para validar el campo*/
     validateInput(input, error, " ");
   }
 }
@@ -150,21 +149,22 @@ function allValidate(input, inputE, inputP, inputP2){
     inputE.classList.contains("input-valid") &&
     inputP.classList.contains("input-valid") &&
     inputP2.classList.contains("input-valid")){
-      /* Si estan validados, salta una alerta indicandonos que la inscripcion ha sido correcta */
+      /* Si estan validados, salta una alerta indicándonos que la inscripción ha sido correcta */
       alert("La inscripción ha sido correcta");
     }
 }
-/* Valida los campos del formulario de registro, haciendo uso de un evento que es capturado cuando se produce un cambio en algun cambio del formulario */
+
+/* Valida los campos del formulario de registro, haciendo uso de un evento que es capturado cuando se produce un cambío en algun campo del formulario */
 const validarFormulario = (e) => {
-  /* Controla que campo ha sido cambiado segun el nombre del campo (se obtiene a traves de 'e.target.name') */
+  /* Controla que campo ha sido cambiado según el nombre del campo (se obtiene a través de 'e.target.name') */
   switch (e.target.name) {
-    /* Segun el campo cambiado va llamando a su funcion de validacion correspondiente */
+    /* Según el campo cambiado va llamando a su función de validación correspondiente */
     case "nombre":
       /* Recuperamos lo valores y elementos HTML correspondientes al campo con 'document.getElementById' */
       var error = document.getElementById("error");
       var inpNombre = document.getElementById("nombre");
       var inpNombreValor = document.getElementById("nombre").value;
-      /* Llamamos a la funcion de validacion */
+      /* Llamamos a la función de validación */
       validateName(inpNombre,error,inpNombreValor);
       break;
       case "email":
@@ -172,7 +172,7 @@ const validarFormulario = (e) => {
         var error = document.getElementById("errorE");
         var inpEmail = document.getElementById("email");
         var inpEmailValor = document.getElementById("email").value;
-        /* Llamamos a la funcion de validacion */
+        /* Llamamos a la función de validación */
         validateEmail(inpEmail,error,inpEmailValor);
       break;
       case "password":
@@ -180,7 +180,7 @@ const validarFormulario = (e) => {
         var error = document.getElementById("errorP");
         var inpPassword = document.getElementById("password");
         var inpPasswordValue = document.getElementById("password").value;
-        /* Llamamos a la funcion de validacion */
+        /* Llamamos a la función de validación */
         validatePassword1(inpPassword,error,inpPasswordValue);
       break;
       case "password2":
@@ -189,15 +189,15 @@ const validarFormulario = (e) => {
         var inpPassword2 = document.getElementById("password2");
         var inpPasswordValue = document.getElementById("password").value;
         var inpPassword2Value = document.getElementById("password2").value;
-        /* Llamamos a la funcion de validacion */
+        /* Llamamos a la función de validación */
         validatePassword2(inpPassword2,error,inpPasswordValue,inpPassword2Value);
       break;
   }
 }
 
-/* Agregamos los eventos a cada elemento del arreglo de inputs, cada vez que ocurra alguno de estos eventos, se llamara a la funcion 'validarFormulario' */
+/* Agregamos los eventos a cada elemento del arreglo de inputs, cada vez que ocurra alguno de estos eventos, se llamara a la función 'validarFormulario' */
 inputs.forEach((input) => {
-  /* Salta cuando el usuario suelta una tecla despues de haber presionado y mantenido presionada */
+  /* Salta cuando el usuario suelta una tecla después de haber presionado y mantenido presionada */
   input.addEventListener('keyup', validarFormulario);
   /* Salta cuando el input pierde el foco (se hace click fuera del elemento) */
   input.addEventListener('blur', validarFormulario);

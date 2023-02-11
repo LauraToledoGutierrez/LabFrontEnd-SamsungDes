@@ -1,13 +1,16 @@
+/* Estilos para el fondo y el color de la página */
+html{
+  background-color:#242933;
+  color: #7F88A8;
+}
+
 /* Estilos para formulario */
 .form-group {
-  margin-bottom: 1rem;
   width: 100%;
   max-width: 25rem;
   height: auto;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   margin: auto;
   border: 3px outset #3D435A;
   border-radius: 7px;
@@ -16,20 +19,25 @@
   font-family: 'Poppins', sans-serif;
   font-size: 0.875em;
   font-weight: bold;
-  
-
 }
-/* Estilos para títulos */
+
+/* Estilos para el título */
 h1{
-  margin-top: 0;
   text-align: left;
   font-size: 1.5625rem;
   font-weight: bold;
   color: #B6C4ED;
+  margin-top: 0;
   margin-left: 10px;
   
  }
-/* Estilos para mensajes de error */
+
+ /* Estilos para la posicion de los label */
+label{
+  margin-left: 10px;
+}
+
+/* Estilos para los mensajes de error */
 .error{
   color:#DB5A5A;
   text-decoration: none;
@@ -38,7 +46,7 @@ h1{
   margin-left: 10px;
 }
 
-/* Estilos para entradas válidas */
+/* Estilos para los campos válidos */
 .input-valid{
   border: 3x solid #4ECA64;
   border-radius: 5px;
@@ -49,7 +57,8 @@ h1{
   height: auto;
   width: auto;
 }
-/* Estilos para entradas no válidas */
+
+/* Estilos para los campos no válidos */
 .input-invalid {
   border: 3px solid #DB5A5A;
   border-radius: 5px;
@@ -60,7 +69,8 @@ h1{
   height: auto;
   width: auto;
 }
-/* Estilos para entradas de texto, correo electrónico y contraseña */
+
+/* Estilos para los campos de texto, correo electrónico y contraseña */
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -73,44 +83,59 @@ input[type="password2"]{
   box-sizing: border-box;
   margin-top: 4px;
   margin-left: 10px;
-  
-}
-/* Estilos para el fondo y el color de la página */
-html{
-  background-color:#242933;
-  color: #7F88A8;
 }
 
-/* Estilos para el botón de validación */
+/* Estilos para el botón de enviar */
 #validateButton{
   background-color: #6C63FF;
   color: #ffffff;
   padding: 0.625rem 1.25rem;
   border: 1px solid black; 
   border-radius: 7px;
-  font-size: 0.8125rem;
   width: 95%;
   height: 3.125rem;
   box-sizing: border-box;
-  font-size: 'Poppins', sans-serif;
-  font-weight: bold;
   margin-bottom: 10px;
   margin-left: 10px;
   margin-top: 8px;
+  font-size: 0.8125rem;
+  font-size: 'Poppins', sans-serif;
+  font-weight: bold;
 }
+
+/* Estilos para el boton cuando pases el raton por encima*/ 
+#validateButton:hover{
+  background-color: #5b54e6;
+  color: white;
+  padding: 0.625rem 1.25rem;
+  border: 3px solid black; 
+  border-radius: 7px;
+  width: 95%;
+  height: 3.125rem;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-top: 8px;
+  font-size: 0.8125rem;
+  font-size: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
 /* Estilos para el div del form */
 div.form-group{
-  margin-top: 1.25rem;
+  margin-top: 2rem;
   margin-bottom: 1.25rem;
 }
+
+/* Estilos para generar un espacio */
 .space{
   height: 8px;
   clear: both;
 }
+
+/* Estilos para generar un espacio */
 .space2{
   height: 10px;
   clear: both;
 }
-label{
-  margin-left: 10px;
-}
+
