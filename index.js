@@ -59,7 +59,7 @@ function validateInput(input, error, errorMessage){
 function validateName(input, error, nombre) {
   if (nombre == "") {
     invalidateInput(input, error, "Rellene este campo");
-  } else if (!isNaN(nombre)) {
+  } else if (!isNaN(nombre) || /\d/.test(nombre)) {
     invalidateInput(input, error, "El nombre solo puede contener caracteres alfabeticos"); 
   } else {
     validateInput(input, error, " ");
