@@ -1,41 +1,38 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Laura Toledo </title>
         <link rel="stylesheet" href="style.css">
-        <script src="index.js"></script>
         <meta charset="UTF-8">
     </head>
     <body>
-        <div class="form-group">
-            <form id="create-account">
-                <h1> Create Account </h1>
-                <div class="form-group__item">
+        <main>
+            <div class="form-group">
+                <form action="" id="formulario" class="formulario">
+                    <h1> Create Account </h1>
                     <label for="nombre">Nombre</label>
                     <input type="text" id="nombre" name="nombre">
                     <div id="error" class="error"></div>
-                </div>
-                <br>
-                <div class="form-group__item">
+                    <br>
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email">
                     <div id="errorE" class="errorE"></div>
-                </div>
-                <br>
-                <div class="form-group__item">
+                    <br>
                     <label for="password">Clave</label>
                     <input type="password" id="password" name="password">
                     <div id="errorP" class="errorP"></div>
-                </div>
-                <br>
-                <div class="form-group__item">
+                    <br>
                     <label for="password2">Confirme su clave</label>
                     <input type="password" id="password2" name="password2">
                     <div id="errorP2" class="errorP2"></div>
-                </div>
-                <br>
-                <input type="button" id="validateButton" value="ENVIAR" onclick="validar()">
-            </form>
-        </div>
+                    <br>
+                    <input type="button" id="validateButton" value="ENVIAR" onclick="validar()">
+                </form>
+            </div>
+            <script src="index.js"></script>
+        </main>
     </body>
 </html>

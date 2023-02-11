@@ -1,3 +1,6 @@
+const formulario = document.getElementById('formulario');
+const inputs = document.querySelectorAll('.form-group #formulario input');
+
 function validar(){
   var nombre = document.getElementById("nombre").value;
   var email = document.getElementById("email").value;
@@ -12,7 +15,6 @@ function validar(){
   var inputP = document.getElementById("password");
   var inputP2 = document.getElementById("password2");
   
-  validateName(input, error, nombre);
   validateName(input, error, nombre);
   validateEmail(inputE, errorE, email);
   validatePassword1(inputP, errorP, password);
@@ -100,3 +102,41 @@ function allValidate(input, inputE, inputP, inputP2){
       alert("Todos los inputs están válidos");
     }
 }
+//Un case por cada input (Aquí hay que darle una vuelta)
+const validarFormulario = (e) => {
+  switch (e.target.name) {
+    case "nombre":
+      var error = document.getElementById("error");
+      var inpNombre = document.getElementById("nombre");
+      var inpNombreValor = document.getElementById("nombre").value;
+      validateName(inpNombre,error,inpNombreValor);
+      break;
+      case "email":
+        var error = document.getElementById("errorE");
+        var inpEmail = document.getElementById("email");
+        var inpEmailValor = document.getElementById("email").value;
+        validateEmail(inpEmail,error,inpEmailValor);
+      break;
+      case "password":
+        var error = document.getElementById("errorP");
+        var inpPassword = document.getElementById("password");
+        var inpPasswordValue = document.getElementById("password").value;
+        validatePassword1(inpPassword,error,inpPasswordValue);
+      break;
+      case "password2":
+        var error = document.getElementById("errorP2");
+        var inpPassword2 = document.getElementById("password2");
+        var inpPasswordValue = document.getElementById("password").value;
+        var inpPassword2Value = document.getElementById("password2").value;
+        validatePassword2(inpPassword2,error,inpPasswordValue,inpPassword2Value);
+      break;
+  }
+}
+
+//Estos son los listener (blur creo que es el de perder foco y el otro ya es ver si te convence, hace un for each para crear listener de forma automática por cada input)
+inputs.forEach((input) => {
+  input.addEventListener('keyup', validarFormulario);
+  input.addEventListener('blur', validarFormulario);
+  input.addEventListener('click', validarFormulario);
+});
+

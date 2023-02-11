@@ -65,9 +65,9 @@ input[type="password2"]{
   height: 45px;
   position: relative;
   box-sizing: border-box;
-  margin-top: 20px;
+  /*margin-top: 20px;
   border: 3px outset #3D435A;
-  border-radius: 7px;
+  border-radius: 7px;*/
 }
 /* Estilos para el fondo y el color de la página */
 html{
