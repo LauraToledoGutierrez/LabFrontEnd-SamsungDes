@@ -1,3 +1,5 @@
+/* LabFrontEnd-SamsungDes -> Laura Toledo Gutiérrez. */
+
 const inputs = document.querySelectorAll('.form-group #formulario input');
 
 /* Función llamada al pulsar el botón 'Enviar' de nuestro formulario */
